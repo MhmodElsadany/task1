@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Task2</string>
+    <string name="regiter">سجل الان</string>
+    <string name="name">الاسم كامل</string>
+    <string name="passward">كلمه المرور</string>
+    <string name="email">البريد الاكترونى</string>
+    <string name="click">بالطغظ على سجل للموافقه على </string>
+    <string name="condition">الشروط</string>
+    <string name="changelan">تغيير اللغه</string>
+    <string name="title">TitleAR</string>
+    <string name="code">CodeAR</string>
+
+</resources>
