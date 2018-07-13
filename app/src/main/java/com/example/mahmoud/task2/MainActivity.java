@@ -90,9 +90,10 @@ public class MainActivity extends AppCompatActivity {
                             for (int i = 0; i < jsonArray.length(); i++) {
 
                                 JSONObject jsonObject1 = jsonArray.getJSONObject(i);
+                                Log.i("mm", jsonObject1.getString(getResources().getString(R.string.title)));
                                 counries.add(jsonObject1.getString(getResources().getString(R.string.title)));
                                 code.add(jsonObject1.getString(getResources().getString(R.string.code)));
-                                codeNumber.add(jsonObject1.getString("code"));
+                                codeNumber.add(jsonObject1.getString("Code"));
                             }
 
                             spinner(counries).setDropDownViewResource(R.layout.spiner_item);
@@ -100,12 +101,22 @@ public class MainActivity extends AppCompatActivity {
                             spinner(code).setDropDownViewResource(R.layout.spiner_item);
                             codespinner.setAdapter(spinner(code));
 
-                            codespinner.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                            codespinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                                 @Override
-                                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                                    if (i > 0) {
-                                        codetxt.setText(codeNumber.get(i).toString());
+                                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                                    String selectedItemText = (String) parent.getItemAtPosition(position);
+                                    // If user change the default selection
+                                    // First item is disable and it is used for hint
+                                    if (position > 0) {
+
+                                        codetxt.setText(codeNumber.get(position - 1).toString());
+
                                     }
+                                }
+
+                                @Override
+                                public void onNothingSelected(AdapterView<?> parent) {
+
                                 }
                             });
                             country.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -207,16 +218,6 @@ public class MainActivity extends AppCompatActivity {
                 });
         Singleton.getInstance(MainActivity.this).addRequestQue(stringRequest);
     }
-
-
-
-
-
-
-
-
-
-
 
 
 }

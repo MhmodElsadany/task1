@@ -57,7 +57,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="15dp"
-                android:background="@drawable/list_en"></Spinner>
+                android:background="@drawable/list_small_en"></Spinner>
 
             <EditText
                 android:id="@+id/zipcode"
@@ -65,7 +65,7 @@
                 android:layout_height="40dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="28dp"
                 android:background="@drawable/input_medium"
                 android:inputType="text"
                 android:padding="10dip" />
