@@ -4,8 +4,8 @@
     <string name="name">Full Name</string>
     <string name="passward">Password</string>
     <string name="email">Email</string>
-    <string name="click">By clicking register you agree to</string>
-    <string name="condition">Terms and Conditions</string>
+    <string name="click">By clicking register you agree to </string>
+    <string name="condition"> Terms and Conditions</string>
     <string name="changelan">Change Language</string>
     <string name="title">TitleEN</string>
     <string name="code">CodeEN</string>
